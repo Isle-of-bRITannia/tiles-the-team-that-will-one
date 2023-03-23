@@ -29,15 +29,9 @@ const ctx = canvas?.getContext('2d');
 //   )
 // );
 
-export const tile = Tile.above(Tile.beside(Tile.above(
+export const brTile = Tile.above(Tile.beside(Tile.above(
     Tile.beside(
     pWiz, iOTS, 
     Tile.above(iOTS, burningLand), 
     waterfall), fire),fire),
     Tile.beside(fox, princess));
-
-const raster = rasterize({width, height})(tile);
-
-renderRaster(raster)(ctx);
-
-console.log('done');
