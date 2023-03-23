@@ -13,20 +13,30 @@ canvas.height = height;
 
 const ctx = canvas?.getContext('2d');
 
+// const tile = Tile.swirl(
+//   Tile.above(
+//     Tile.swirl(
+//       Tile.above(
+//         Tile.pure('red'),
+//         fireGirl
+//       )
+//     ),
+//     Tile.beside(
+//       uh, 
+//       Tile.pure('blue')
+//     )
+//   )
+// );
+
+//const tile = Tile.swirl(Tile.above(Tile.swirl(Tile.above(Tile.pure('red'),fireGirl)),Tile.beside(uh, Tile.pure('blue'))));
+
 const tile = Tile.swirl(
   Tile.above(
-    Tile.swirl(
-      Tile.above(
-        Tile.pure('red'),
-        fireGirl
-      )
-    ),
-    Tile.beside(
-      uh, 
-      Tile.pure('blue')
-    )
+    Tile.quad(Tile.pure('blue'), Tile.pure('yellow'), Tile.pure('red'), Tile.pure('green')),
+    uh
   )
-);
+); 
+
 
 const raster = rasterize({width, height})(tile);
 
