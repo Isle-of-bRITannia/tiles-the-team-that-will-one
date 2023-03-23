@@ -1,6 +1,6 @@
 import { Tile } from './tiles/api.js';
 
-import { fireGirl, purpleWiz, uh, redWiz, fireBall } from './tiles/imageTiles/index.js';
+import { fireGirl, purpleWiz, uh, redWiz, fireBall } from './tiles/imageTiles/tr.js';
 import { rasterize } from './tiles/observe/rasterize.js';
 import { renderRaster } from './tiles/observe/renderRaster.js';
 
@@ -74,8 +74,7 @@ const tile = Tile.above(
       purpleWiz
     )
   )
-); 
-
+);
 
 const raster = rasterize({width, height})(tile);
 
