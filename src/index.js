@@ -1,6 +1,6 @@
 import { Tile } from './tiles/api.js';
 
-import { fireGirl, uh } from './tiles/imageTiles/index.js';
+import { fireGirl, uh, brownWiz, fireball, purp, whiteWiz } from './tiles/imageTiles/index.js';
 import { rasterize } from './tiles/observe/rasterize.js';
 import { renderRaster } from './tiles/observe/renderRaster.js';
 
@@ -13,30 +13,14 @@ canvas.height = height;
 
 const ctx = canvas?.getContext('2d');
 
-// const tile = Tile.swirl(
-//   Tile.above(
-//     Tile.swirl(
-//       Tile.above(
-//         Tile.pure('red'),
-//         fireGirl
-//       )
-//     ),
-//     Tile.beside(
-//       uh, 
-//       Tile.pure('blue')
-//     )
-//   )
-// );
-
-//const tile = Tile.swirl(Tile.above(Tile.swirl(Tile.above(Tile.pure('red'),fireGirl)),Tile.beside(uh, Tile.pure('blue'))));
-
 const tile = Tile.swirl(
   Tile.above(
-    Tile.quad(Tile.pure('blue'), Tile.pure('yellow'), Tile.pure('red'), Tile.pure('green')),
-    uh
+   fireball,
+    Tile.beside(
+      brownWiz
+    )
   )
-); 
-
+);
 
 const raster = rasterize({width, height})(tile);
 
