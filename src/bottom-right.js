@@ -1,7 +1,7 @@
 import { Tile } from './tiles/api.js';
 
 import { fireGirl, uh } from './tiles/imageTiles/index.js';
-import { pWiz, iOTS, burningLand, waterfall, fire, fox, princess } from './tiles/imageTiles/br-tiles.js';
+import { pWiz, iOTS, burningLand, waterfall, fire, fox, princess, bigFire } from './tiles/imageTiles/br-tiles.js';
 import { rasterize } from './tiles/observe/rasterize.js';
 import { renderRaster } from './tiles/observe/renderRaster.js';
 
@@ -33,7 +33,7 @@ export const tile = Tile.above(Tile.beside(Tile.above(
     Tile.beside(
     pWiz, iOTS, 
     Tile.above(iOTS, burningLand), 
-    waterfall), fire),fire),
+    waterfall), fire),Tile.above(bigFire,fire)),
     Tile.beside(fox, princess));
 
 const raster = rasterize({width, height})(tile);

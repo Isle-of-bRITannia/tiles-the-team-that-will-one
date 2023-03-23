@@ -20,4 +20,5 @@ export const burningLand = await imgTile('./br-burning-land.jpg');
 export const waterfall = await imgTile('./br-waterfall.jpeg');
 export const fire = await imgTile('./br-ygo-orange.png');
 export const fox = await imgTile('./br-fox.jpg');
-export const princess = await imgTile('./br-fire-princess.png');
+export const princess = await imgTile('./br-fire-princess.jpg');
+export const bigFire = await imgTile('./br-tremendous-fire.jpg');
