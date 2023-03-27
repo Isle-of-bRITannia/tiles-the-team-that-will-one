@@ -1,4 +1,5 @@
 import { brTile } from './bottom-right.js';
+import { trTile } from './tr.js';
 import { Tile } from './tiles/api.js';
 import { fireGirl, purpleWiz, uh, redWiz, fireBall } from './tiles/imageTiles/index.js';
 import { rasterize } from './tiles/observe/rasterize.js';
@@ -77,7 +78,7 @@ const tile = Tile.beside(
     )
   ),
   Tile.above(
-    Tile.flipVertical(fireBall),
+    trTile,
     brTile
   )
 ); 
