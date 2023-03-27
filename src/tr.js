@@ -1,6 +1,5 @@
 import { Tile } from './tiles/api.js';
-
-import { fireGirl, purpleWiz, uh, redWiz, fireBall } from './tiles/imageTiles/tr.js';
+import { fireGirl, uh, brownWiz, fireball, purp, whiteWiz } from './tiles/imageTiles/tr.js';
 import { rasterize } from './tiles/observe/rasterize.js';
 import { renderRaster } from './tiles/observe/renderRaster.js';
 
@@ -30,49 +29,12 @@ const ctx = canvas?.getContext('2d');
 
 //const tile = Tile.swirl(Tile.above(Tile.swirl(Tile.above(Tile.pure('red'),fireGirl)),Tile.beside(uh, Tile.pure('blue'))));
 
-export const trTile = Tile.above(
-  Tile.beside(
-    Tile.quad(
-      redWiz,
-      fireBall,
-      Tile.quad(
-        redWiz,
-        redWiz,
-        fireBall,
-        redWiz
-      ),
-      redWiz
-    ),
+export const trTile = Tile.swirl(
+  Tile.above(fireball,
     Tile.beside(
-      fireBall,
-      purpleWiz
-      )
-  )
-  ,
-  Tile.beside(
-    Tile.quad(
-      fireBall,
-      redWiz,
-      fireBall,
-      redWiz
-    ),
-    Tile.beside(
-      Tile.quad(
-        redWiz,
-        Tile.quad(
-          redWiz,
-          redWiz,
-          purpleWiz,
-          purpleWiz
-        ),
-        redWiz,
-        Tile.above(
-          purpleWiz,
-          fireBall
-        )
-      ),
-      purpleWiz
+      brownWiz
     )
+  
   )
 );
 
