@@ -36,8 +36,8 @@ export const brTile = Tile.above(Tile.beside(Tile.above(
     waterfall), fire),Tile.above(bigFire,fire)),
     Tile.beside(fox, princess));
 
-const raster = rasterize({width, height})(tile);
+//const raster = rasterize({width, height})(tile);
 
-renderRaster(raster)(ctx);
+//renderRaster(raster)(ctx);
 
 console.log('done');
